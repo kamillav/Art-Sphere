@@ -1,6 +1,6 @@
 # 🎨 ArtSphere - Database Application Project
 
-### 🙋‍♂️ By [Your Name]
+### 🙋‍♂️ By Kamilla Volkova
 
 ## 🚀 Application Title
 **ArtSphere: A Personalized Art Management Platform**
