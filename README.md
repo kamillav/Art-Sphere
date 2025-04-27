@@ -11,7 +11,12 @@ ArtSphere is designed to enhance the art exploration and collection experience b
 An exciting feature is the location-based notifications 📍—users can receive real-time alerts when they are near an art piece they have saved in their personal galleries, enhancing their museum visits.
 
 ## 📌 Proposed Entities
-Initially, the application will focus on core entities such as Art Pieces 🖼️, Artists 👨‍🎨, Users 👥, Museums 🏛️, and Collections 📚. Each art piece will have attributes including ID, name/title, artist, image URL, creation year, and location. Artists will have their own detailed profiles linking back to their artworks. Museums will manage exhibition details and locations. Users will be able to maintain personal collections of favorite or visited art pieces, enabling deeper interaction and engagement. Additional entities like Exhibitions 🎟️, Categories 📂, and Reviews 🌟 may evolve as the project progresses.
+Initially, the application will focus on core entities such as Art Pieces 🖼️, Creators (both Artists 👨‍🎨 and Companies 🏢), Museums 🏛️, and Users 👥.
+Each art piece will have attributes including ID, name/title, creator (whether an artist or a company), creation year, medium, type, department, and museum location.
+Creators will be managed through a unified system, where Artists will have additional profile details like begin date, end date, and nationality, while Companies will have their own information.
+Museums will manage their exhibition locations, addresses, and geographical coordinates.
+Users will be able to maintain personal collections of favorite or visited art pieces, enabling deeper interaction and engagement.
+As the project evolves, additional entities like Exhibitions 🎟️, Categories 📂, and Reviews 🌟 may be introduced to enrich the experience.
 
 ![image](https://github.com/user-attachments/assets/a55ecaa4-71e7-4f43-8a89-09785a88800d)
 
