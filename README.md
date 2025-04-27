@@ -18,7 +18,8 @@ Museums will manage their exhibition locations, addresses, and geographical coor
 Users will be able to maintain personal collections of favorite or visited art pieces, enabling deeper interaction and engagement.
 As the project evolves, additional entities like Exhibitions 🎟️, Categories 📂, and Reviews 🌟 may be introduced to enrich the experience.
 
-![image](https://github.com/user-attachments/assets/a55ecaa4-71e7-4f43-8a89-09785a88800d)
+![image](https://github.com/user-attachments/assets/66776bdd-3220-46d9-becd-ec3da1fff07f)
+
 
 
 ## 🛠️ Proposed Technology Stack
