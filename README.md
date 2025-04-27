@@ -13,6 +13,9 @@ An exciting feature is the location-based notifications 📍—users can receive
 ## 📌 Proposed Entities
 Initially, the application will focus on core entities such as Art Pieces 🖼️, Artists 👨‍🎨, Users 👥, Museums 🏛️, and Collections 📚. Each art piece will have attributes including ID, name/title, artist, image URL, creation year, and location. Artists will have their own detailed profiles linking back to their artworks. Museums will manage exhibition details and locations. Users will be able to maintain personal collections of favorite or visited art pieces, enabling deeper interaction and engagement. Additional entities like Exhibitions 🎟️, Categories 📂, and Reviews 🌟 may evolve as the project progresses.
 
+![image](https://github.com/user-attachments/assets/a55ecaa4-71e7-4f43-8a89-09785a88800d)
+
+
 ## 🛠️ Proposed Technology Stack
 - 🐍 **Programming Language:** Python
 - 🌐 **User Interface:** Web Interface (React frontend)
