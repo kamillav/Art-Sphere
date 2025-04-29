@@ -1,0 +1,124 @@
+@startuml
+
+' ==== Global Style ====
+skinparam backgroundColor #FAFAFA
+skinparam defaultFontName "Helvetica"
+skinparam defaultFontColor #333333
+skinparam ArrowColor #FF7F50
+hide circle
+hide methods
+hide stereotype
+
+' ==== Museum Info Package ====
+package "Museum Info" {
+  entity museum #E0F0FF {
+    *Museum_ID : integer <<PK>>
+    --
+    Museum_Name : text
+    Address : text
+    Latitude : real
+    Longitude : real
+  }
+}
+
+' ==== Artwork Classification Package ====
+package "Artwork Classification" {
+  entity department #FFD4C2 {
+    *dept_id : integer <<PK>>
+    --
+    dept_name : text
+  }
+
+  entity medium #FFD4C2 {
+    *medium_id : integer <<PK>>
+    --
+    name : text
+    material : text
+  }
+
+  entity type #FFD4C2 {
+    *type_id : integer <<PK>>
+    --
+    type_name : text
+  }
+}
+
+' ==== Creator Info Package ====
+package "Creator Info" {
+  entity creator #D7ECFF {
+    *creator_id : integer <<PK>>
+    --
+    creator_type : text
+  }
+
+  entity artist #D7ECFF {
+    *artist_id : integer <<PK>>
+    --
+    creator_id : integer <<FK>>
+    artist_name : text
+    begin_date : text
+    end_date : text
+    nationality : text
+  }
+
+  entity company #D7ECFF {
+    *company_id : integer <<PK>>
+    --
+    creator_id : integer <<FK>>
+    company_name : text
+    nationality : text
+  }
+}
+
+' ==== Artwork Package ====
+package "Artwork" {
+  entity artobject #FFD4C2 {
+    *object_id : integer <<PK>>
+    --
+    object_name : text
+    objectmuseum_id : text
+    museum_id : integer <<FK>>
+    creator_id : integer <<FK>>
+    year : text
+    medium_id : integer <<FK>>
+    type_id : integer <<FK>>
+    dept_id : integer <<FK>>
+  }
+}
+
+' ==== User Management Package ====
+package "User Management" {
+  entity user #FFE5DC {
+    *user_id : integer <<PK>>
+    --
+    username : text
+    email : text
+    password_hash : text
+    created_at : timestamp
+  }
+
+  entity user_collection #FFE5DC {
+    *collection_id : integer <<PK>>
+    --
+    user_id : integer <<FK>>
+    object_id : integer <<FK>>
+    note : text
+    date_added : timestamp
+  }
+}
+
+' ==== Define Relationships with Labels ====
+
+artobject "exhibited at" --> "Museum" museum::Museum_ID
+artobject "created by" --> "Creator" creator::creator_id
+artobject "uses" --> "Medium" medium::medium_id
+artobject "classified as" --> "Type" type::type_id
+artobject "stored in" --> "Department" department::dept_id
+
+artist "is a type of" --> "Creator" creator::creator_id
+company "is a type of" --> "Creator" creator::creator_id
+
+user_collection "belongs to" --> "User" user::user_id
+user_collection "tracks" --> "ArtObject" artobject::object_id
+
+@enduml
