@@ -2,6 +2,9 @@
 
 ### by Kamilla Volkova
 
+### see me present here:
+https://drive.google.com/file/d/1e3R4SMF_ay2X-4ACvpBvHYJilxAadEwZ/view?usp=sharing 
+
 ## 🎯 Application Purpose and Summary
 ArtSphere is designed to enhance the art exploration and collection experience by allowing users to effortlessly track art pieces they encounter, manage their personal art collections, and discover new artworks. 🌟 It solves the common problem of losing track of art pieces visited or desired, creating a seamless connection between art enthusiasts and artworks across various museums and galleries, particularly focusing on museums located in New York City. 🗽
 
