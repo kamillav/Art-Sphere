@@ -2,9 +2,6 @@
 
 ### 🙋‍♂️ By Kamilla Volkova
 
-## 🚀 Application Title
-**ArtSphere: A Personalized Art Management Platform**
-
 ## 🎯 Application Purpose and Summary
 ArtSphere is designed to enhance the art exploration and collection experience by allowing users to effortlessly track art pieces they encounter, manage their personal art collections, and discover new artworks. 🌟 It solves the common problem of losing track of art pieces visited or desired, creating a seamless connection between art enthusiasts and artworks across various museums and galleries, particularly focusing on museums located in New York City. 🗽
 
@@ -37,7 +34,7 @@ The E-R model for **ArtSphere** fulfills all project requirements as detailed be
 - 📦 **Database Type:** SQLite
 - 🚧 **Frameworks and Tools:** Flask (backend), React (frontend), Pandas (data manipulation)
   
-# 📂 Project Structure: ArtSphere
+## 📂 Project Structure: ArtSphere
 
 ## Backend (`/backend`)
 - `app.py` — Main Flask application
