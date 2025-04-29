@@ -36,7 +36,7 @@ The E-R model for **ArtSphere** fulfills all project requirements as detailed be
   
 ## 📂 Project Structure: ArtSphere
 
-## Backend (`/backend`)
+### Backend (`/backend`)
 - `app.py` — Main Flask application
 - `models.py` — Database models (User, ArtObject, etc.)
 - `requirements.txt` — Python dependencies
@@ -52,7 +52,7 @@ The E-R model for **ArtSphere** fulfills all project requirements as detailed be
 - **Instance folder** (`/backend/instance/`)
   - `database.db` — Local database (Flask default instance)
 
-## Frontend (`/frontend`)
+### Frontend (`/frontend`)
 - **React Application (`/frontend/src/`)**
   - `assets/`
     - `react.svg`
@@ -86,13 +86,13 @@ The E-R model for **ArtSphere** fulfills all project requirements as detailed be
 - `package-lock.json`
 - `README.md` — Frontend README
 
-## Documentation (`/docs`)
+### Documentation (`/docs`)
 - `UserGuide.md` — Full user guide and installation instructions
 
-## UML Diagrams (`/uml`)
+### UML Diagrams (`/uml`)
 - `Artsphere_Tiny.puml` — PlantUML ER diagram for database design
 
-## Root Level
+### Root Level
 - `README.md` — Main project documentation
 - `.git/` — Git repository data
 
