@@ -18,6 +18,19 @@ Museums will manage their exhibition locations, addresses, and geographical coor
 Users will be able to maintain personal collections of favorite or visited art pieces, enabling deeper interaction and engagement.
 As the project evolves, additional entities like Exhibitions 🎟️, Categories 📂, and Reviews 🌟 may be introduced to enrich the experience.
 
+## 📚 E-R Model Compliance Checklist
+
+The E-R model for **ArtSphere** fulfills all project requirements as detailed below:
+
+| **Requirement** | **Included?** | **Details** |
+|:-----------------|:--------------|:------------|
+| **8–10 Entities** | ✅ | The model includes `User`, `Museum`, `Creator`, `Artist`, `Company`, `ArtObject`, `UserCollection`, `Medium`, `Type`, and `Department`. |
+| **Weak Entity** | ✅ | `UserCollection` is a weak entity, dependent on both `User` and `ArtObject` for its identification. |
+| **Composite Attribute** | ✅ | `Museum` includes a composite `address` attribute (street, city, state, and zip code components). |
+| **Multivalued Attribute** | ✅ | `ArtObject` can belong to multiple categories via attributes like `Medium` and `Type`. |
+| **Many-to-Many Relationship** | ✅ | ArtObjects can be associated with multiple categories (mediums, types), forming many-to-many relationships. |
+| **Descriptive Attribute on Relationship** | ✅ | `UserCollection` includes the `added_at` timestamp to track when a user saved an artwork. |
+
 ![image](https://github.com/user-attachments/assets/fa61d93e-8f9d-4809-a4ef-af7780c1fd94)
 
 
