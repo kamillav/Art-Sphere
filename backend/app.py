@@ -1,0 +1,41 @@
+# app.py - Main Flask application file
+from flask import Flask, request, jsonify, session
+from flask_cors import CORS
+from flask_sqlalchemy import SQLAlchemy
+from flask_bcrypt import Bcrypt
+from flask_jwt_extended import JWTManager, jwt_required, create_access_token, get_jwt_identity
+
+from datetime import timedelta
+import os
+
+basedir = os.path.abspath(os.path.dirname(__file__))
+app = Flask(__name__)
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev_secret_key')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'database.db')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['JWT_SECRET_KEY'] = os.environ.get('JWT_SECRET_KEY', 'jwt_dev_secret')
+app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(hours=24)
+app.config['JWT_IDENTITY_CLAIM'] = 'sub'
+
+CORS(app, supports_credentials=True, resources={r"/api/*": {"origins": "http://localhost:5173"}}, expose_headers=["Authorization"])
+db = SQLAlchemy(app)
+bcrypt = Bcrypt(app)
+jwt = JWTManager(app)
+
+# Import routes after initializing app
+from routes.auth import auth_bp
+from routes.artobjects import artobjects_bp
+from routes.artdiary import artdiary_bp  # 🔄 FIXED HERE
+
+# Register blueprints with proper prefixes
+app.register_blueprint(auth_bp, url_prefix='/api/auth')
+app.register_blueprint(artobjects_bp, url_prefix='/api/artobjects')
+app.register_blueprint(artdiary_bp, url_prefix='/api/artdiary')  # 🔄 FIXED HERE
+
+# Add a root route for sanity check
+@app.route('/')
+def index():
+    return jsonify({"message": "Welcome to ArtSphere API!"}), 200
+
+if __name__ == '__main__':
+    app.run(debug=True)
