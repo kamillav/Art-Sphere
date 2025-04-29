@@ -14,9 +14,7 @@ An exciting feature is the location-based notifications 📍—users can receive
 Initially, the application will focus on core entities such as Art Pieces 🖼️, Creators (both Artists 👨‍🎨 and Companies 🏢), Museums 🏛️, and Users 👥.
 Each art piece will have attributes including ID, name/title, creator (whether an artist or a company), creation year, medium, type, department, and museum location.
 Creators will be managed through a unified system, where Artists will have additional profile details like begin date, end date, and nationality, while Companies will have their own information.
-Museums will manage their exhibition locations, addresses, and geographical coordinates.
-Users will be able to maintain personal collections of favorite or visited art pieces, enabling deeper interaction and engagement.
-As the project evolves, additional entities like Exhibitions 🎟️, Categories 📂, and Reviews 🌟 may be introduced to enrich the experience.
+![image](https://github.com/user-attachments/assets/fa61d93e-8f9d-4809-a4ef-af7780c1fd94)
 
 ## 📚 E-R Model Compliance Checklist
 
@@ -31,7 +29,6 @@ The E-R model for **ArtSphere** fulfills all project requirements as detailed be
 | **Many-to-Many Relationship** | ✅ | ArtObjects can be associated with multiple categories (mediums, types), forming many-to-many relationships. |
 | **Descriptive Attribute on Relationship** | ✅ | `UserCollection` includes the `added_at` timestamp to track when a user saved an artwork. |
 
-![image](https://github.com/user-attachments/assets/fa61d93e-8f9d-4809-a4ef-af7780c1fd94)
 
 
 ## 🛠️ Proposed Technology Stack
