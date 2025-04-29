@@ -39,6 +39,67 @@ The E-R model for **ArtSphere** fulfills all project requirements as detailed be
 - 🌐 **User Interface:** Web Interface (React frontend)
 - 📦 **Database Type:** SQLite
 - 🚧 **Frameworks and Tools:** Flask (backend), React (frontend), Pandas (data manipulation)
+## 📁 Project Structure
+├── backend/
+│   ├── app.py
+│   ├── models.py
+│   ├── requirements.txt
+│   ├── database.db
+│   ├── sql/
+│   │   ├── DDL.sql
+│   │   ├── DML.sql
+│   │   ├── QUERIES.sql
+│   ├── routes/
+│   │   ├── auth.py
+│   │   ├── artobjects.py
+│   │   ├── artdiary.py
+│   └── instance/
+│       └── database.db
+│
+├── frontend/
+│   ├── src/
+│   │   ├── assets/
+│   │   │   └── react.svg
+│   │   ├── components/
+│   │   │   ├── auth/
+│   │   │   │   └── ProtectedRoute.jsx
+│   │   │   ├── layout/
+│   │   │   │   └── Navbar.jsx
+│   │   ├── contexts/
+│   │   │   ├── AuthContext.jsx
+│   │   │   ├── CollectionContext.jsx
+│   │   ├── pages/
+│   │   │   ├── ArtDiary.jsx
+│   │   │   ├── ArtObjectDetails.jsx
+│   │   │   ├── Home.jsx
+│   │   │   ├── Login.jsx
+│   │   │   ├── Profile.jsx
+│   │   │   ├── Register.jsx
+│   │   │   └── Search.jsx
+│   │   ├── services/
+│   │   │   ├── api.js
+│   │   │   └── authService.js
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── index.html
+│   ├── vite.config.js
+│   ├── tailwind.config.js
+│   ├── postcss.config.js
+│   ├── eslint.config.js
+│   ├── package.json
+│   ├── package-lock.json
+│   └── README.md
+│
+├── docs/
+│   └── UserGuide.md
+│
+├── uml/
+│   └── Artsphere_Tiny.puml
+│
+├── README.md
+└── .git/ (Git repository folder)
 
 ## 👩‍💻 User Interaction and CRUD Operations
 Users will interact with the ArtSphere application through a responsive web interface built with React, interacting seamlessly with Flask backend APIs:
