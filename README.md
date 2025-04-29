@@ -40,6 +40,7 @@ The E-R model for **ArtSphere** fulfills all project requirements as detailed be
 - 📦 **Database Type:** SQLite
 - 🚧 **Frameworks and Tools:** Flask (backend), React (frontend), Pandas (data manipulation)
 ## 📁 Project Structure
+artsphere/
 ├── backend/
 │   ├── app.py
 │   ├── models.py
