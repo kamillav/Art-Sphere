@@ -44,6 +44,7 @@ source venv/bin/activate
 - **Windows:**
 
 ```bash
+cd backend  ##(if not there yet)
 venv\Scripts\activate
 ```
 
