@@ -30,6 +30,8 @@ cd ArtSphere
 python -m venv venv
 ```
 
+*If it does not work, please try downloading python from the official website and installing it.*
+
 2. **Activate the virtual environment:**
 
 - **macOS/Linux:**
@@ -49,12 +51,21 @@ venv\Scripts\activate
 ```bash
 pip install -r requirements.txt
 ```
+*Might also need to run*
+
+```bash
+pip install flask-bcrypt
+pip install flask-jwt-extended
+```
+
+*In case never worked with flask on your computer before*
 
 4. **Start the backend server:**
 
 ```bash
 python app.py
 ```
+
 
 The backend will run at:
 
