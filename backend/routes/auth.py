@@ -1,7 +1,5 @@
 # routes/auth.py
 from flask import Blueprint, request, jsonify
-from backend import db, bcrypt
-from models import User  # 🔥 Fixed (capital U)
 from flask_jwt_extended import create_access_token
 
 auth_bp = Blueprint('auth', __name__)
@@ -12,6 +10,9 @@ def register():
     username = data.get('username')
     email = data.get('email')
     password = data.get('password')
+
+    from extensions import db, bcrypt
+    from models import User
 
     if not username or not email or not password:
         return jsonify({'error': 'Missing username, email, or password'}), 400
@@ -46,6 +47,9 @@ def login():
     data = request.get_json()
     email = data.get('email')
     password = data.get('password')
+
+    from app import db, bcrypt
+    from models import User
 
     if not email or not password:
         return jsonify({'error': 'Missing email or password'}), 400

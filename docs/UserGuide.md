@@ -63,7 +63,7 @@ pip install flask-jwt-extended
 4. **Start the backend server:**
 
 ```bash
-python app.py
+python -m backend.main
 ```
 
 

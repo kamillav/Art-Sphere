@@ -1,5 +1,5 @@
 # models.py
-from app import db
+from extensions import db, bcrypt
 from datetime import datetime
 
 # ===============================

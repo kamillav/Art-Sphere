@@ -22,9 +22,13 @@ def create_app():
     db.init_app(app)
     bcrypt.init_app(app)
     jwt.init_app(app)
-    CORS(app)
 
-    from routes.auth import auth_bp
+    CORS(app, supports_credentials=True, origins=["http://localhost:5173"])
+
+    from backend.routes.auth import auth_bp
     app.register_blueprint(auth_bp)
+
+    from backend.routes.artobjects import artobjects_bp
+    app.register_blueprint(artobjects_bp, url_prefix="/api/artobjects")
 
     return app

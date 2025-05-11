@@ -1,13 +1,14 @@
 # routes/artobjects.py
 from flask import Blueprint, request, jsonify
 from sqlalchemy import or_, func
-from models import ArtObject, Creator, Artist, Company, Museum, Medium, Type, Department
-from app import db
 
 artobjects_bp = Blueprint('artobjects', __name__)
 
 @artobjects_bp.route('/', methods=['GET'])
 def get_art_objects():
+    from models import ArtObject, Creator, Artist, Company, Museum, Medium, Type, Department
+    from extensions import db
+
     page = request.args.get('page', 1, type=int)
     per_page = request.args.get('limit', 20, type=int)
     search = request.args.get('search', '')
@@ -84,6 +85,9 @@ def get_art_objects():
 
 @artobjects_bp.route('/<int:object_id>', methods=['GET'])
 def get_art_object(object_id):
+    from models import ArtObject, Creator, Artist, Company, Museum, Medium, Type, Department
+    from extensions import db
+
     result = db.session.query(
         ArtObject,
         Museum,
@@ -149,6 +153,9 @@ def get_art_object(object_id):
 
 @artobjects_bp.route('/filters', methods=['GET'])
 def get_filters():
+    from models import ArtObject, Creator, Artist, Company, Museum, Medium, Type, Department
+    from extensions import db
+
     creators = []
     artists = db.session.query(Artist.creator_id, Artist.artist_name.label('name')).all()
     companies = db.session.query(Company.creator_id, Company.company_name.label('name')).all()

@@ -1,8 +1,6 @@
 # routes/artdiary.py - Art diary routes
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import jwt_required, get_jwt_identity
-from app import db
-from models import User, UserCollection, ArtObject, Creator, Artist, Company
 
 artdiary_bp = Blueprint('artdiary', __name__)
 
@@ -10,6 +8,9 @@ artdiary_bp = Blueprint('artdiary', __name__)
 @artdiary_bp.route('/', methods=['GET'])
 @jwt_required()
 def get_artdiary():
+    from extensions import db
+    from models import User, UserCollection, ArtObject, Creator, Artist, Company
+
     user_id = get_jwt_identity()
 
     # Get user's art diary collections
@@ -48,6 +49,9 @@ def get_artdiary():
 @artdiary_bp.route('/add', methods=['POST'])
 @jwt_required()
 def add_to_artdiary():
+    from app import db
+    from models import User, UserCollection, ArtObject, Creator, Artist, Company
+
     user_id = get_jwt_identity()
     data = request.get_json()
 
@@ -81,6 +85,9 @@ def add_to_artdiary():
 @artdiary_bp.route('/remove/<int:collection_id>', methods=['DELETE'])
 @jwt_required()
 def remove_from_artdiary(collection_id):
+    from app import db
+    from models import User, UserCollection, ArtObject, Creator, Artist, Company
+
     user_id = get_jwt_identity()
 
     # Get user collection entry
