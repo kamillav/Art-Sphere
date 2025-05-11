@@ -27,7 +27,7 @@ cd ArtSphere
 1. **Create a virtual environment:**
 
 ```bash
-python -m venv venv
+python -m venv venv or python3 -m venv venv
 ```
 
 *If it does not work, please try downloading python from the official website and installing it.*
@@ -37,6 +37,7 @@ python -m venv venv
 - **macOS/Linux:**
 
 ```bash
+cd backend  ##(if not there yet)
 source venv/bin/activate
 ```
 
@@ -63,7 +64,7 @@ pip install flask-jwt-extended
 4. **Start the backend server:**
 
 ```bash
-python -m backend.main
+python app.py
 ```
 
 
@@ -90,6 +91,7 @@ cd frontend
 ```bash
 npm install
 ```
+*If you don't have Node.js installed, download it from the official website and install it.*
 
 3. Start the React development server:
 
