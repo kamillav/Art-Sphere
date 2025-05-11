@@ -12,7 +12,12 @@ jwt = JWTManager()
 
 def create_app():
     app = Flask(__name__)
-    app.config.from_pyfile("config.py")
+
+    # ✅ Inline configuration (no more config.py needed)
+    app.config["SECRET_KEY"] = "dev-secret"
+    app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
+    app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+    app.config["JWT_SECRET_KEY"] = "dev-jwt-secret"
 
     db.init_app(app)
     bcrypt.init_app(app)
