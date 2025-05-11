@@ -3,7 +3,8 @@
 ### by Kamilla Volkova
 
 ### see me present here:
-https://drive.google.com/file/d/1e3R4SMF_ay2X-4ACvpBvHYJilxAadEwZ/view?usp=sharing
+https://trincoll-my.sharepoint.com/:v:/g/personal/kvolkova_trincoll_edu/EY56Y98YGZdGgxwQSzSLRNQBEd7SAzh58yYZFieJ9lmzKg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&email=jonathan.johnson%40trincoll.edu&e=uctAeO
+
 
 ### see how to run it on your local host here:
 https://github.com/kamillav/ArtSphere/blob/main/docs/UserGuide.md
